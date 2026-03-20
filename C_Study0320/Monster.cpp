@@ -14,7 +14,7 @@ void AMonster::MoveTo(int X, int Y)
 {
 	this->X = X;
 	this->Y = Y;
-	std::cout << X << ", " << Y << "로 이동하였습니다" << std::endl;
+	std::cout << this->Name << "이(가) (" << X << ", " << Y << ")로 이동하였습니다" << std::endl;
 };
 
 void AMonster::AttackTo(APlayer* Player)

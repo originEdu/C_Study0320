@@ -16,5 +16,7 @@ public:
 	AGoblin* Goblins;
 	ASlime* Slimes;
 	AWildBoar* WildBoars;
+
+	void Init();
 };
 
