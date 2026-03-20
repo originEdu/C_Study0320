@@ -1,10 +1,9 @@
 ﻿#include<iostream>
-
-#include "World.h"
+#include "Engin.h"
 int main()
 {
-	AWorld World;
-	World.Init();
-	World.Player;
+	UEngin* MyEngin = new UEngin();
+	MyEngin->Run();
+	delete MyEngin;
 	return 0;
 }

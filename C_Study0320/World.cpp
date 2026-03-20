@@ -4,11 +4,12 @@
 #include "WildBoar.h"
 #include "Slime.h"
 
-AWorld::AWorld()
+UWorld::UWorld()
 {
+	Init();
 }
 
-AWorld::~AWorld()
+UWorld::~UWorld()
 {
 	delete Player;
 	delete[] Goblins;
@@ -18,7 +19,7 @@ AWorld::~AWorld()
 
 void Init()
 {
-	APlayer* Player = new APlayer;
+	APlayer* Player = new APlayer();
 	AGoblin* Goblins = new AGoblin[3];
 	AWildBoar* WildBoars = new AWildBoar[3];
 	ASlime* Slimes = new ASlime[3];

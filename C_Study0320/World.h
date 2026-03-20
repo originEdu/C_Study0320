@@ -6,17 +6,15 @@ class AGoblin;
 class ASlime;
 class AWildBoar;
 
-class AWorld : public AActor
+class UWorld : public AActor
 {
 public:
-	AWorld();
-	~AWorld();
+	UWorld();
+	~UWorld();
 
 	APlayer* Player;
 	AGoblin* Goblins;
 	ASlime* Slimes;
 	AWildBoar* WildBoars;
-
-	void Init();
 };
 
