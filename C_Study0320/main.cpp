@@ -5,6 +5,6 @@ int main()
 {
 	AWorld World;
 	World.Init();
-
+	World.Player;
 	return 0;
 }
