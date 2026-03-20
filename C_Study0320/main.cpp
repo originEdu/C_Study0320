@@ -27,10 +27,10 @@ int main()
 	ASlime* Slimes = nullptr;
 	if (WildBoarCount > 0)
 	{
-		WildBoars = new AWildBoar[WildBoarCount];
+		WildBoars = new AWildBoar[WildBoarCount]();
 	}
-	Goblins = new AGoblin[GoblinCount];
-	Slimes = new ASlime[SlimeCount];
+	Goblins = new AGoblin[GoblinCount]();
+	Slimes = new ASlime[SlimeCount]();
 
 	//이동
 	for (int i = 0; i < WildBoarCount; i++)
