@@ -5,17 +5,21 @@
 #include "WildBoar.h"
 #include "Slime.h"
 
+#define SAFE_DELETES(Object)        if (Object) { delete[] Object; }
+
 UWorld::UWorld()
 {
 	srand((unsigned)time(nullptr));
 	Init();
 }
 
+
+
 UWorld::~UWorld()
 {
 	delete Player;
+	SAFE_DELETES(WildBoars);
 	delete[] Goblins;
-	delete[] WildBoars;
 	delete[] Slimes;
 }
 
@@ -38,7 +42,7 @@ void UWorld::Init()
 	Slimes = new ASlime[SlimeCount]();
 }
 
-void UWorld::TotalMove()
+void UWorld::MoveAll()
 {
 	for (int i = 0; i < WildBoarCount; i++)
 	{
@@ -56,3 +60,4 @@ void UWorld::TotalMove()
 		Slimes[i].MoveTo(1, 1);
 	}
 }
+

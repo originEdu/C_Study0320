@@ -7,5 +7,7 @@ class AWildBoar : public AMonster
 public:
 	AWildBoar();
 	~AWildBoar();
+
+	void move() override;
 };
 

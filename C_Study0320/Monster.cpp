@@ -28,3 +28,8 @@ void AMonster::DropGold()
 void AMonster::Die()
 {
 }
+
+//void AMonster::move()
+//{
+//	std::cout << "AMonster::move()" << std::endl;
+//}

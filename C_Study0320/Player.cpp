@@ -27,3 +27,8 @@ void APlayer::PickUpGold()
 void APlayer::Die()
 {
 }
+
+void APlayer::move()
+{
+	std::cout << "APlayer::move()" << std::endl;
+}

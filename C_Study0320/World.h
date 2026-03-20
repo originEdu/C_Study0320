@@ -21,6 +21,6 @@ public:
 	int SlimeCount = 0;
 
 	void Init();
-	void TotalMove();
+	void MoveAll();
 };
 

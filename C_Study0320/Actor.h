@@ -10,5 +10,7 @@ public:
 	int Y;
 	std::string Mesh;
 	std::string Name;
+
+	virtual void move();
 };
 

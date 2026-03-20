@@ -19,7 +19,6 @@ public:
 	void MoveTo(int X, int Y);
 	void AttackTo(APlayer* Player);
 	void DropGold();
-	void Die();
-	
+	void Die();	
 };
 

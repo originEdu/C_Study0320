@@ -9,3 +9,8 @@ AActor::~AActor()
 {
 	//std::cout << "AActor 소멸자" << std::endl;
 }
+
+void AActor::move()
+{
+	std::cout << "AActor::move()" << std::endl;
+}
