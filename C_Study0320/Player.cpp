@@ -19,3 +19,11 @@ void APlayer::MoveTo(int X, int Y)
 void APlayer::AttackTo()
 {
 }
+
+void APlayer::PickUpGold()
+{
+}
+
+void APlayer::Die()
+{
+}

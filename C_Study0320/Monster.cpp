@@ -20,4 +20,11 @@ void AMonster::MoveTo(int X, int Y)
 void AMonster::AttackTo(APlayer* Player)
 {
 
-};
+}
+void AMonster::DropGold()
+{
+}
+
+void AMonster::Die()
+{
+}

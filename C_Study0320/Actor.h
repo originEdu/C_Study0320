@@ -9,5 +9,6 @@ public:
 	int X;
 	int Y;
 	std::string Mesh;
+	std::string Name;
 };
 

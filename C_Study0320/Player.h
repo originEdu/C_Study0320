@@ -9,9 +9,10 @@ public:
 
 	int HP;
 	int Damage;
-	std::string Name;
 
 	void MoveTo(int X, int Y);
 	void AttackTo();
+	void PickUpGold();
+	void Die();
 };
 

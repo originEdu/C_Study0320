@@ -1,12 +1,11 @@
 ﻿#pragma once
-#include "Actor.h"
 
 class APlayer;
 class AGoblin;
 class ASlime;
 class AWildBoar;
 
-class UWorld : public AActor
+class UWorld
 {
 public:
 	UWorld();
