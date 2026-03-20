@@ -17,14 +17,14 @@ UWorld::~UWorld()
 	delete[] Slimes;
 }
 
-void Init()
+void UWorld::Init()
 {
-	APlayer* Player = new APlayer();
-	AGoblin* Goblins = new AGoblin[3];
-	AWildBoar* WildBoars = new AWildBoar[3];
-	ASlime* Slimes = new ASlime[3];
-
-	Player->Name = "GiWon";
+	Player = new APlayer();
+	Goblins = new AGoblin[3]{};
+	WildBoars = new AWildBoar[3]{};
+	Slimes = new ASlime[3]{};
+	
+	Player->Name= "플레이어";
 	Goblins[0].Name = "고블린1";
 	Goblins[1].Name = "고블린2";
 	Goblins[2].Name = "고블린3";
@@ -35,5 +35,8 @@ void Init()
 	Slimes[1].Name = "슬라임2";
 	Slimes[2].Name = "슬라임3";
 	
-	
+	/*delete Player;
+	delete[] Goblins;
+	delete[] WildBoars;
+	delete[] Slimes;*/
 }
