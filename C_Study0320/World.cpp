@@ -1,4 +1,5 @@
-﻿#include "World.h"
+﻿#include<iostream>
+#include "World.h"
 #include "Player.h"
 #include "Goblin.h"
 #include "WildBoar.h"
@@ -6,6 +7,7 @@
 
 UWorld::UWorld()
 {
+	srand((unsigned)time(nullptr));
 	Init();
 }
 
@@ -20,23 +22,37 @@ UWorld::~UWorld()
 void UWorld::Init()
 {
 	Player = new APlayer();
-	Goblins = new AGoblin[3]{};
-	WildBoars = new AWildBoar[3]{};
-	Slimes = new ASlime[3]{};
-	
-	Player->Name= "플레이어";
-	Goblins[0].Name = "고블린1";
-	Goblins[1].Name = "고블린2";
-	Goblins[2].Name = "고블린3";
-	WildBoars[0].Name = "멧돼지1";
-	WildBoars[1].Name = "멧돼지2";
-	WildBoars[2].Name = "멧돼지3";
-	Slimes[0].Name = "슬라임1";
-	Slimes[1].Name = "슬라임2";
-	Slimes[2].Name = "슬라임3";
-	
-	/*delete Player;
-	delete[] Goblins;
-	delete[] WildBoars;
-	delete[] Slimes;*/
+	WildBoarCount = rand() % 6;
+	GoblinCount = (rand() % 3) + 1;
+	SlimeCount = (rand() % 100) + 1;
+
+	WildBoars = nullptr;
+	Goblins = nullptr;
+	Slimes = nullptr;
+
+	if (WildBoarCount > 0)
+	{
+		WildBoars = new AWildBoar[WildBoarCount]();
+	}
+	Goblins = new AGoblin[GoblinCount]();
+	Slimes = new ASlime[SlimeCount]();
+}
+
+void UWorld::TotalMove()
+{
+	for (int i = 0; i < WildBoarCount; i++)
+	{
+		WildBoars[i].Name = "멧돼지";
+		WildBoars[i].MoveTo(1, 1);
+	}
+	for (int i = 0; i < GoblinCount; i++)
+	{
+		Goblins[i].Name = "고블린";
+		Goblins[i].MoveTo(1, 1);
+	}
+	for (int i = 0; i < SlimeCount; i++)
+	{
+		Slimes[i].Name = "슬라임";
+		Slimes[i].MoveTo(1, 1);
+	}
 }
