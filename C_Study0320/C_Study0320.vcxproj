@@ -136,6 +136,7 @@
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="Gold.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Slime.cpp" />

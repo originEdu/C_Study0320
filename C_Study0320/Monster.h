@@ -2,6 +2,8 @@
 #include "Actor.h"
 #include "Gold.h"
 
+class APlayer;
+
 class AMonster : public AActor
 {
 public:
@@ -13,7 +15,7 @@ public:
 	AGold Gold;
 
 	void MoveTo(int X, int Y);
-	void AttackTo();
+	void AttackTo(APlayer* Player);
 	
 	
 };

@@ -1,6 +1,6 @@
 ﻿#include "Actor.h"
 
-AActor::AActor()
+AActor::AActor() : X(0), Y(0)
 {
 }
 
